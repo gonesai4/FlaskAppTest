@@ -19,5 +19,11 @@ pipeline {
                 echo "the Build Result is: ${currentBuild.currentResult}"
             }
         }
+        stage('Prod') {
+            steps {
+                echo "This is Prod Stage"
+                echo "the Build Result is: ${currentBuild.currentResult}"
+            }
+        }
     }
 }
