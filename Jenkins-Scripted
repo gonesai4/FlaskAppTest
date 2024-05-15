@@ -1,0 +1,15 @@
+node {
+      stage('Build') {            
+            echo "This is Build Stage"
+            echo env.BUILD_NUMBER  
+            echo env.NODE_NAME          
+        }
+        stage('Test') {            
+            echo "This is Test Stage"
+            echo "The Workspace is: ${env.WORKSPACE}"            
+        }
+        stage('Deploy') {
+            echo "This is Deploy Stage"
+            echo "the Build Result is: ${currentBuild.currentResult}"
+        }
+}
